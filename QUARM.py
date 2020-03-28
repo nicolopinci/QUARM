@@ -6,8 +6,8 @@ Created on Mon Mar 23 20:24:01 2020
 @author: nicolo
 """
 
-numbit = 2 # Number of bits
-sortValues = True # decides whether the state values have to be sorted according to probability or not
+numbit = 3 # Number of bits
+sortValues = False # decides whether the state values have to be sorted according to probability or not
 
 from plotly.offline import plot
 import plotly.graph_objs as go
@@ -56,8 +56,6 @@ filename = askopenfilename() # show an "Open" dialog box and return the path to 
 
 file = open(filename, "r")
 code = file.read()
-
-n = 2
 
 code = "\naddToPlot(timeMatrix, circuit, simulator)\n".join(code.split("\n"))
 
